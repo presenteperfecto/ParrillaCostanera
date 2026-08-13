@@ -127,7 +127,7 @@ a {
 
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 20px;
 }
 
 
@@ -138,6 +138,8 @@ a {
     align-items: center;
 
     gap: 10px;
+
+    flex-shrink: 0;
 }
 
 
@@ -175,7 +177,11 @@ a {
 
     align-items: center;
 
-    gap: 25px;
+    justify-content: flex-end;
+
+    gap: 20px;
+
+    flex-shrink: 1;
 }
 
 
@@ -185,7 +191,9 @@ a {
 
     font-weight: bold;
 
-    font-size: .95rem;
+    font-size: .9rem;
+
+    white-space: nowrap;
 
     transition: var(--transicion);
 }
@@ -546,6 +554,12 @@ a {
 /* ==================================================
                   NOSOTROS
 ================================================== */
+.contact-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
 .nosotros {
 
@@ -1411,117 +1425,75 @@ footer {
 
 @media (max-width: 700px) {
 
-    .nav-container {
-        min-height: 65px;
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
 
+    .nav-container {
+        width: 96%;
+        min-height: 60px;
+        gap: 8px;
+    }
+
+
+    /* ========================= LOGO
+    ========================= */
+
+    .logo {
+        gap: 5px;
+        flex-shrink: 0;
+    }
+
+    .logo > span {
+        font-size: 26px;
+    }
+
+    .logo strong {
+        font-size: .72rem;
+    }
+
+
+    .logo small {
+        font-size: .55rem;
+    }
+
+
+    /* =========================
+            MENÚ MOBILE
+    ========================= */
+
     .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 7px;
+        /*El menú ocupa como máximo el espacio disponible.*/
+        max-width: 58%;
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-shrink: 1;
+        /*Ocultar scrollbar*/
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
         display: none;
     }
 
-
-    .hero {
-        min-height: 650px;
-        background-attachment:
-            scroll;
+    .nav-links a {
+        font-size: .62rem;
+        padding: 4px 2px;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
-
-    .hero h1 {
-        font-size: 3.3rem;
+    .nav-links a::after {
+        bottom: -3px;
+        height: 2px;
     }
-
-
-    .hero-info {
-        display: grid;
-        grid-template-columns:
-            1fr;
-    }
-
-
-    .hero-info div {
-        width: 100%;
-    }
-
-
-    .menu-section,
-    .nosotros,
-    .ubicacion,
-    .contacto {
-        padding: 70px 0;
-    }
-
-
-    .menu-category {
-        padding: 20px;
-        border-left-width: 5px;
-    }
-
-
-    .category-title {
-        align-items: flex-start;
-    }
-
-
-    .category-icon {
-        width: 55px;
-        height: 55px;
-        font-size: 28px;
-    }
-
-
-    .category-title h3 {
-        font-size: 1.5rem;
-    }
-
-
-    .map-wrapper {
-        height: 350px;
-    }
-
-
-    .location-info {
-        flex-direction: column;
-        align-items:stretch;
-    }
-
-
-    .location-info .btn {
-        width: 100%;
-    }
-
-
-    .horario-content {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-
-    .horario-content h2 {
-        font-size: 2.5rem;
-    }
-
-
-    .footer-main {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-
-    .whatsapp-float {
-        width: 55px;
-        height: 55px;
-        right: 18px;
-        bottom: 18px;
-    }
-
 }
 
 
