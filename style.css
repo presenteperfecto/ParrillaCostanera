@@ -6,7 +6,7 @@
     --rojo: #e53935;
     --rojo-oscuro: #b71c1c;
 
-    --azul: #1976d2;
+    --azul: #1976d2; 
     --azul-oscuro: #0d47a1;
 
     --amarillo: #ffd600;
@@ -1235,7 +1235,7 @@ a {
                 WHATSAPP FLOTANTE
 ================================================== */
 
-.whatsapp-float {
+/*.whatsapp-float {
     position: fixed;
     right: 25px;
     bottom: 25px;
@@ -1260,7 +1260,7 @@ a {
 
     transform:
         scale(1.1);
-}
+} */
 
 
 /* ==================================================
